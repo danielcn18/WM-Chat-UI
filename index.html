@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat UI</title>
+    <link rel="stylesheet" href="chatUi.css">
+</head>
+
+<body>
+    <div id="contain">
+        <div id="left-contain">
+            <div id="search">
+                <input type="search" id="search-bar" placeholder="Search">
+            </div>
+            <div id="contact-list-outer">
+                <div id="contact-list-inner">
+                    <div class="contact">
+                        <div class="user-icon">
+                            <img src="./Images/daryl.png">
+                        </div>
+                        <div class="user-name">
+                            <p>Darin Austin</p>
+                        </div>
+                        <div class="user-last-message-date">
+                            <p>Apr 16</p>
+                        </div>
+                        <div class="user-last-message">
+                            <p>This is a message</p>
+                        </div>
+                    </div>
+                    <div class="contact">
+                        <div class="user-icon">
+                            <img src="./Images/kim.jpeg">
+                        </div>
+                        <div class="user-name">
+                            <p>Kim O'Neil</p>
+                        </div>
+                        <div class="user-last-message-date">
+                            <p>2 days ago</p>
+                        </div>
+                        <div class="user-last-message">
+                            <p>Very funny</p>
+                        </div>
+                    </div>
+                    <div class="contact">
+                        <div class="user-icon">
+                            <img src="./Images/john.jpeg">
+                        </div>
+                        <div class="user-name">
+                            <p>John Anderson</p>
+                        </div>
+                        <div class="user-last-message-date">
+                            <p>1 week ago</p>
+                        </div>
+                        <div class="user-last-message">
+                            <p>Yes I love how Python does that</p>
+                        </div>
+                    </div>
+                    <div class="contact">
+                        <div class="user-icon">
+                            <img src="./Images/ben.png">
+                        </div>
+                        <div class="user-name">
+                            <p>Ben Smith</p>
+                        </div>
+                        <div class="user-last-message-date">
+                            <p>2:49 PM</p>
+                        </div>
+                        <div class="user-last-message">
+                            <p>Yeah Miami Heat are done</p>
+                        </div>
+                    </div>
+                    <div class="contact">
+                        <div class="user-icon">
+                            <img src="./Images/douglas.png">
+                        </div>
+                        <div class="user-name">
+                            <p>Douglas Johannasen</p>
+                        </div>
+                        <div class="user-last-message-date">
+                            <p>6:14 PM</p>
+                        </div>
+                        <div class="user-last-message">
+                            <p>No it does not</p>
+                        </div>
+                    </div>
+                    <div class="contact">
+                        <div class="user-icon">
+                            <img src="./Images/jacob.png">
+                        </div>
+                        <div class="user-name">
+                            <p>Jacob Manly</p>
+                        </div>
+                        <div class="user-last-message-date">
+                            <p>3 secs ago</p>
+                        </div>
+                        <div class="user-last-message">
+                            <p>Just be very careful doing that</p>
+                        </div>
+                    </div> 
+                    <div class="contact">
+                        <div class="user-icon">
+                            <img src="./Images/stacey.jpeg">
+                        </div>
+                        <div class="user-name">
+                            <p>Stacey Wilson</p>
+                        </div>
+                        <div class="user-last-message-date">
+                            <p>30 mins ago</p>
+                        </div>
+                        <div class="user-last-message">
+                            <p>Awesome!!! Congratulations!!!!</p>
+                        </div>
+                    </div>
+                    <div class="contact">
+                        <div class="user-icon">
+                            <img src="./Images/batman.jpg">
+                        </div>
+                        <div class="user-name">
+                            <p>Bruce Wayne</p>
+                        </div>
+                        <div class="user-last-message-date">
+                            <p>20 seconds ago</p>
+                        </div>
+                        <div class="user-last-message">
+                            <p>You still own me $50000 Clark</p>
+                        </div>
+                    </div>
+                    <div class="contact">
+                        <div class="user-icon">
+                            <img src="./Images/lucky.jpg">
+                        </div>
+                        <div class="user-name">
+                            <p>Lucky Clover</p>
+                        </div>
+                        <div class="user-last-message-date">
+                            <p>3 years ago</p>
+                        </div>
+                        <div class="user-last-message">
+                            <p>They're magically delicious</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div id="add-contact">
+                <p type="button" id="add-contact-button"></p>
+                <!-- <div id="button-outer">
+                    +
+                </div> -->
+            </div>
+        </div>
+        <div id="right-contain">
+            <div id="current-convo-name">
+                <p>Darin Austin</p>
+                <button id="delete-convo-button"></button>
+            </div>
+            <div id="message-content-outer">
+                <div id="message-content-inner">
+                    <div class="receiving-and-sending-message">
+
+                        <div id="message-receiver-content">
+                            <img class="sending-message-icon" src="./Images/daryl.png">
+                            <div class="sending-message-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus consequatur deleniti quidem facere voluptatibus delectus ratione sed sequi. Voluptate odio harum fugit molestiae culpa. Deserunt ipsa aspernatur aperiam quaerat illo.
+                            </div>
+                            <div class="sending-message-date">Apr 12</div>
+                        </div>
+
+                        <div id="message-sender-content">
+                            <div class="receiving-message-text">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo aperiam molestiae hic ad amet cupiditate, suscipit iusto rerum quam vitae vel nostrum dolorem veritatis perferendis, provident esse unde praesentium minima.
+                            </div>
+                            <div class="receiving-message-date">Apr 14</div>
+                        </div> 
+
+                        <div id="message-receiver-content">
+                            <img class="sending-message-icon" src="./Images/daryl.png">
+                            <div class="sending-message-text">
+                                I'm just in the process of finishing off the last pieces of material for the course.
+                            </div>
+                            <div class="sending-message-date">Apr 14</div>
+                        </div>
+
+                        <div id="message-sender-content">
+                            <div class="receiving-message-text">
+                                Well we need to work out sometime soon where we really want to record our video course.
+                            </div>
+                            <div class="receiving-message-date">Apr 15</div>
+                        </div>  
+
+                        <div id="message-receiver-content">
+                            <img class="sending-message-icon" src="./Images/daryl.png">
+                            <div class="sending-message-text">
+                                All I know is where I live it's too hard to record because of all the street noise.
+                            </div>
+                            <div class="sending-message-date">Apr 15</div>
+                        </div>
+
+                        <div id="message-sender-content">
+                            <div class="receiving-message-text">
+                                Maybe we can use Jim's studio.
+                            </div>
+                            <div class="receiving-message-date">Apr 16</div>
+                        </div>   
+
+                        <div id="message-receiver-content">
+                            <img class="sending-message-icon" src="./Images/daryl.png">
+                            <div class="sending-message-text">
+                                Yeah I think it's best we do that. Otherwise things won't work well at all. I'm adding more text here to test the sizing of the speech bubble and the wrapping of it too.
+                            </div>
+                            <div class="sending-message-date">Apr 16</div>
+                        </div>
+                      
+
+                        <div id="message-sender-content">
+                            <div class="receiving-message-text">
+                                Ok then
+                            </div>
+                            <div class="receiving-message-date">Apr 16</div>
+                        </div>   
+
+                    </div>
+                </div>
+            </div>
+            <div id="message-area">
+                <img id="add-file" src="./Images/attachment-logo.svg" alt="">
+                <input type="text" id="message-bar" placeholder="type a message">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

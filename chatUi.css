@@ -1,0 +1,287 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-image: linear-gradient(to right, #88bce4, #486ca4);
+}
+#contain{
+    height: 92vh;
+    width: 65%;
+    margin: 4vh auto;
+    border-radius: 15px;
+    display: flex;
+}
+#left-contain, #right-contain{
+    max-height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(9, 1fr);
+    box-sizing: border-box;
+}
+#left-contain{
+    width: 28%;
+    background-color: #304ca4;
+    border-radius: 18px 0 0 18px;
+}
+#search{
+    border-bottom: 1px double black;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+#search-bar:focus{
+    background-image: none;
+}
+#search-bar:focus::placeholder{
+    color: transparent;
+}
+#search-bar::placeholder{
+    color: white;
+    padding-left: 20%;
+    height: 100%;
+    padding-top: 20%;
+    font-size: 17px;
+    align-self: center;
+    font-weight: 600;
+}
+#search-bar{    
+    border-radius: 2px;
+    border: 0px solid transparent;
+    display: flex;   
+    height: 35%;
+    width: 90%;
+    margin-right: 1%;
+    background-color: #7084bc;
+    background-image: url('./Images/search.svg');
+    background-position: left 7% top 16%;
+    background-size: 26px;
+    background-repeat: no-repeat;
+    color: white;
+}
+.contact{
+    border-bottom: 1px solid black;
+    display: grid;
+    grid-template-columns: 54px 1fr auto;
+    grid-column-gap: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    height: fit-content;
+    padding: 1vh 0;
+}
+.user-icon{
+    margin: 10px 10px 0 14px;
+    background-repeat: no-repeat;
+    width: 48px;
+    height: 48px;
+    grid-row: span 2;
+}
+.user-icon>img{
+    border-radius: 100px;
+    height: 40px;
+    width: 40px;
+}
+.user-name{
+    text-align: left;
+    font-size: 13px;
+    min-height: 12px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    align-self: flex-end;
+}
+.user-name>p, .user-last-message-date>p{
+    padding: 0;
+    margin: 0 0 0 0;
+}
+.user-last-message-date{
+    grid-column: 3/4;
+    grid-row: 1/2;
+    text-align: right;
+    height: auto;
+    align-self: flex-end;
+    justify-self: flex-end;
+    margin-right: 10px;
+}
+.user-last-message-date>p{
+    color: rgb(174, 174, 174);
+    font-size: 11px;
+    margin: 0;
+}
+.user-last-message>p{
+    color: rgb(209, 209, 209);
+    font-size: 13px;
+    margin: 6px 0 0 0;
+    padding: 0;
+}
+.user-last-message{
+    /* grid-row: 2/3; */
+    grid-column: 2/4;
+}
+#contact-list-outer{
+    grid-column: 1/2;
+    grid-row: 2/9;
+    display: flex;
+}
+#contact-list-inner{
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-auto-flow: row;
+    overflow-y: auto;
+}
+#contact-list-inner::-webkit-scrollbar{
+    display: none;
+}
+#add-contact{
+    border-top: 1px solid black;
+}
+#add-contact-button{
+    --b: 4px;
+    width: 40px; 
+    aspect-ratio: 1;
+    border: 10px solid white;
+    background:
+      conic-gradient(from 90deg at var(--b) var(--b),white 90deg,transparent 0) 
+      calc(100% + var(--b)/2) calc(100% + var(--b)/2)/
+      calc(50%  + var(--b))   calc(50%  + var(--b));
+    display: inline-block;
+    width: auto;
+    height: 3vh;
+    border-radius: 50%;
+    margin: 3vh 0 0 7%;
+}
+#right-contain{
+    width: 72%;
+    background-color: white;
+    border-radius: 0 18px 18px 0;
+}
+#current-convo-name{
+    background-color: #eeeeee;
+    border-radius: 0 18px 0 0;
+}
+#current-convo-name>p{
+    display: inline-block;
+    color: #304ca4;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+    margin: 29px 0 0 3%;
+    padding-right: 0;
+}
+#delete-convo-button{
+    background-image: url('./Images/trash-logo.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 40px;  
+    float: right;
+    margin-right: 4%;  
+    margin-top: 23px;
+    /* margin: 4% 0 auto 67%; */
+    border: 1px solid transparent;
+}
+#message-content-outer{
+    grid-column: 1/2;
+    grid-row: 2/9;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-auto-flow: row;
+    overflow-y: auto;
+}
+#message-content-outer::-webkit-scrollbar{
+    display: none;
+}
+#message-content-inner{
+    display: flex;
+    flex-direction: column-reverse;
+}
+#message-area{
+    grid-row: 9/10;
+    background-color: #eeeeee;
+    height: 100%;
+    width: 100%;
+    border-radius: 0 0 18px 0;
+    display: block;
+    align-items: center;
+}
+#add-file{
+    height: 40px;
+    width: 40px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 40px;
+    display: inline;
+}
+#message-bar{
+    height: 50%;
+    width: 80%;
+    float: right;
+    margin-right: 5%;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline;
+    border: 2px solid #d4d4d4;
+}
+.receiving-and-sending-message{
+    width: 100%;
+    height: auto;
+    display: grid;
+}
+.sending-message-icon{
+    margin: 5px 10px 0 25px;
+    background-repeat: no-repeat;
+    width: 48px;
+    height: 48px;
+    border-radius: 100px;
+    grid-row: span 2;
+}
+.sending-message-text{
+    background-color: #eeeeee;
+    padding: .8rem 1rem;
+    max-width: 64%;
+    border-radius: 20px 20px 20px 0px;
+    border: 1px solid #d4d4d4;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-self: flex-start;
+
+}
+.sending-message-date{
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #b3b3b3;
+    justify-self: flex-start;
+
+}
+#message-receiver-content{
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    grid-column-gap: 35px;
+    margin: 1vh 0;
+}
+.receiving-message-text{
+    background-color: #2d4aa4;
+    padding: .8rem 1rem;
+    max-width: 64%;
+    border-radius: 20px 20px 0px 20px;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-self: flex-end;
+    margin-right: 1rem;
+    color: white;
+}
+.receiving-message-date{
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #b3b3b3;
+    justify-self: flex-end;
+    margin-right: 1rem;
+}
+#message-sender-content{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 35px;
+    margin: 1vh 0;
+}
